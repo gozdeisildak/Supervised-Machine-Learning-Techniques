@@ -1,6 +1,6 @@
-##Ferhat KORTAK - 2015510099
-##GÖZDE IÞILDAK -2015510034
-##SERAY ESEN - 2015510027
+##Ferhat KORTAK 
+##GOZDE ISILDAK 
+##SERAY ESEN 
 
 library(class)
 library(ISLR)
@@ -131,10 +131,10 @@ printMetricResult <- function(i){
 nameModel <- function(k){
   if(k == 1)  print(">> Knn MODEL --")
   else if(k == 2)  print(">> Naive-Bayes MODEL --")
-  else if(k == 3)  print(">> Support Vectör LINEAR MODEL --")
-  else if(k == 4)  print(">> Support Vectör POLYNOMIAL MODEL --")
-  else if(k == 5)  print(">> Support Vectör RADIAL MODEL --")
-  else if(k == 6)  print(">> Desýcýon TREE --")
+  else if(k == 3)  print(">> Support VectÃ¶r LINEAR MODEL --")
+  else if(k == 4)  print(">> Support VectÃ¶r POLYNOMIAL MODEL --")
+  else if(k == 5)  print(">> Support VectÃ¶r RADIAL MODEL --")
+  else if(k == 6)  print(">> DesÃ½cÃ½on TREE --")
   else   print(">> Random Forest MODEL --")
 }
 #AUC FUNCTION--------------
@@ -395,7 +395,7 @@ for(fold in 1:5){ #Cross Validation
   svmPolinomial_metricsVal<- c( matrixAcc[4,fold],matrixPre[4,fold],matrixRecall[4,fold],matrixF1score[4,fold],matrixAUC[4,fold])
   barplot(svmPolinomial_metricsVal,xlab = "Evaluation Metrics",ylab = "Values",ylim = c(0,1),names.arg= c("Acc","Pre","Recall","fscore","AUC"),col=blues9)
   
-  # SUPPORT VECTOR MACHINE Radýal KERNEL------
+  # SUPPORT VECTOR MACHINE RadÃ½al KERNEL------
 
   
   set.seed(50600)
@@ -508,14 +508,14 @@ for(fold in 1:5){ #Cross Validation
       varImpPlot(output.forest)
       
 
-}#CROSS VALÝDATÝON
+}#CROSS VALÃDATÃON
 #When cross validation finished , starts prints
   for(k in 1:7){
     nameModel(k)
     printMetricResult(k)
   }
 }#undersampling
-#You must run ANN algortihm seperately. Because ýt has different number of neuron and hidden layer combinations.
+#You must run ANN algortihm seperately. Because Ã½t has different number of neuron and hidden layer combinations.
 ##Artifical Neural Network--------------------------------------------------------------------------------------
 
 prepared_onlineShopper$Revenue <- as.integer(as.logical(prepared_onlineShopper$Revenue))
